@@ -1,5 +1,5 @@
 # 
-<img src="./assets/banner.jpeg" alt="Banner para Site Sua Nova Sombra Roxo e Azul Moderno Delicado" style="border-radius: 200px; width: 100%; height: auto;">
+<img src="./assets/ecosrev_banner.png" alt="Banner do Projeto EcosRev temporario " style="border-radius: 200px; width: 100%; height: auto;">
 
 ## Índice
 - [Sobre o Projeto](#-ecosrev--seu-app-para-descarte-consciente-de-resíduos-eletrônicos)
@@ -85,7 +85,7 @@ O aplicativo foi desenvolvido como parte do projeto da disciplina de Laboratóri
 ![Concurrently](https://img.shields.io/badge/Concurrently-%23000000?style=flat) 
 ---
 
-## � Como iniciar este projeto
+## Como iniciar este projeto em modo de desenvolvimento
 
 1. Certifique-se de ter o Node.js instalado.
 2. Instale as dependências do projeto:
@@ -98,15 +98,13 @@ O aplicativo foi desenvolvido como parte do projeto da disciplina de Laboratóri
 	```
 4. Inicie o projeto:
 	```bash
-	expo start
+	npx expo start
 	```
 5. Use o app Expo Go no seu celular para escanear o QR code exibido no terminal ou na página web.
 
-Pronto! O app estará rodando em modo de desenvolvimento.
-
 ---
 
-## �📜 Requisitos Funcionais
+## 📜 Requisitos Funcionais
 <!-- RF01 - Gerenciamento de Usuários -->
 <details>
 <summary>RF01 - Gerenciamento de Usuários</summary>
