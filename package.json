@@ -1,5 +1,5 @@
 {
-  "name": "EcosRev",
+  "name": "ecosrev",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "expo": "54.0.12",
     "expo-camera": "~17.0.8",
     "expo-font": "~14.0.8",
+    "expo-image-picker": "^17.0.8",
     "expo-linear-gradient": "~15.0.7",
     "expo-status-bar": "~3.0.8",
     "formik": "^2.4.6",
