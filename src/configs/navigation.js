@@ -125,6 +125,8 @@ export function PublicDrawer() {
       )}
       screenOptions={{ 
         headerShown: false,
+        drawerType: 'front',
+        overlayColor: 'rgba(0,0,0,0.5)',
         drawerActiveTintColor: theme.colors.primary,
         drawerInactiveTintColor: theme.colors.text.primary,
         drawerActiveBackgroundColor: `${theme.colors.primary}20`,
@@ -140,6 +142,8 @@ export function PublicDrawer() {
           width: 280,
           borderRightColor: theme.colors.border,
           borderRightWidth: 1,
+          elevation: 20,
+          zIndex: 9999,
         }
       }}
     >
@@ -275,11 +279,15 @@ export function AuthenticatedDrawer() {
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{ 
         headerShown: false,
+        drawerType: 'front',
+        overlayColor: 'rgba(0,0,0,0.5)',
         drawerStyle: {
           backgroundColor: theme.colors.surface,
           width: 280,
           borderRightColor: theme.colors.border,
           borderRightWidth: 1,
+          elevation: 20,
+          zIndex: 9999,
         }
       }}
     >

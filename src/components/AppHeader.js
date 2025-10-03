@@ -1,31 +1,29 @@
 import React from "react";
-import { StyleSheet, View, Text, StatusBar, Platform, SafeAreaView } from "react-native";
+import { StyleSheet, View, Text, StatusBar, Platform } from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from "../contexts/ThemeContext";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animation from "./Animation";
 
 const Header = () => {
   const theme = useTheme();
-  const insets = useSafeAreaInsets();
-
+  // useSafeAreaInsets não é necessário quando usamos SafeAreaView
   return (
-    <View
+    <SafeAreaView
       style={[
         styles.header,
         {
-          paddingTop: insets.top,
           backgroundColor: theme.colors.background,
           shadowColor: theme.colors.shadow,
         },
       ]}
     >
       <StatusBar
-        translucent
+        translucent={false}
         backgroundColor={theme.colors.statusbar}
         barStyle={theme.statusBarStyle || "light-content"}
       />
 
-      <View style={styles.contentContainer}>
+  <View style={styles.contentContainer}>
         {/* Animação alinhada à esquerda */}
         <View style={styles.animationContainer}>
           <Animation />
@@ -36,7 +34,7 @@ const Header = () => {
           EcosRev
         </Text>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -46,11 +44,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
-    height: Platform.OS === 'ios' ? 120 : 110,
+    minHeight: Platform.OS === 'ios' ? 60 : 56,
+    paddingVertical: 8,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.15,
     shadowRadius: 8,
-    elevation: 8,
+    elevation: 0,
+    zIndex: 0,
   },
   contentContainer: {
     flexDirection: "row",
